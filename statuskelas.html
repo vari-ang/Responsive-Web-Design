@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Import Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- File eksternal CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Project Desweb</title>
+</head>
+<body>
+    <header id="top-header">
+        <nav class="topnav" id="topnav">     
+            <a href="index.html">
+                <img src="images/ubaya.png" alt="Logo" class="home-logo">
+                Home
+            </a>
+            <a href="daftarkelas.html">Daftar Kelas Matkul</a>
+            <a href="pilihkelas.html">Pilih Kelas</a>
+            <a href="statuskelas.html" class="active">Status Kelas</a>
+            <a class="login" href="login.html">
+                <i class="fa fa-sign-in"></i> Log In
+            </a>
+            <a href="#" class="bar" onclick="barClicked()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+      
+    <aside class="col-1">
+        <section class="styled profile">
+            <h2>Biodata Diri</h2>
+            <img src="images/user.jpg" class="rounded-img" width="125px" height="125px" alt="Profile Picture">
+            <hr>
+               
+            <div class="profile-col-1">Nama:</div>
+            <div class="profile-col-2">&nbsp;Otnil</div>
+            <br><br>
+            
+            <div class="profile-col-1">IPK:</div>
+            <div class="profile-col-2">&nbsp;3.87</div>
+            <br><br>
+
+            <div class="profile-col-1">Semester:</div>
+            <div class="profile-col-2">&nbsp;6</div>
+            <br><br>
+
+            <div class="profile-col-1">Total SKS:</div>
+            <div class="profile-col-2">&nbsp;109</div>
+
+            <div class="clear"></div>
+        </section>
+
+        <section>
+            <ul class="styled">
+                <li>Ubah Data Pribadi</li>
+                <li>Ganti Password</li>
+                <li>Log Out</li>
+            </ul>
+        </section>
+    </aside>
+
+    <article class="col-2">
+        <section class="styled" id="status-header">
+            <h2>Status MK Yang Pernah Didaftarkan</h2>
+            <p><b>Total 4 MK (10 SKS)</b></p>
+            <p>1 MK (3 SKS) Disetujui</p>
+            <p>2 MK (5 SKS) Menunggu</p>
+            <p>1 MK (2 SKS) Ditolak</p>
+        </section>
+
+        <section class="styled">
+            <div class="status-box">
+                <p><b>Statistika Bisnis KP C (3 SKS)</b></p>
+                <p>Rabu 13:00 - 14:00</p>
+                <p>Tanggal Daftar: 25 Okt 2018 14:33:05</p>
+                <p><em>Prioritas: 2</em></p>
+            </div>
+            <div class="status-text disetujui">
+                DISETUJUI
+            </div>
+        </section>
+
+        <section class="styled">
+            <div class="status-box">
+                <p><b>Sistem Informasi Akuntansi KP A (3 SKS)</b></p>
+                <p>Jumat 08:50 - 11:35</p>
+                <p>Tanggal Daftar: 25 Okt 2018 14:58:27</p>
+                <p><em>Prioritas: 3</em></p>
+            </div>
+            <div class="status-text menunggu">
+                MENUNGGU
+            </div>
+        </section>
+
+        <section class="styled">
+            <div class="status-box">
+                <p><b>Manajemen Keuangan KP - (2 SKS)</b></p>
+                <p>Sabtu 07:00 - 08:50</p>
+                <p>Tanggal Daftar: 26 Okt 2018 20:09:56</p>
+                <p><em>Prioritas: 4</em></p>
+            </div>
+            <div class="status-text menunggu">
+                MENUNGGU
+            </div>
+        </section>
+
+        <section class="styled">
+            <div class="status-box">
+                <p><b>Sistem Informasi Pemasaran KP B (2 SKS)</b></p>
+                <p>Rabu 15:45 - 17:35</p>
+                <p>Tanggal Daftar: 24 Okt 2018 09:23:41</p>
+                <p><em>Prioritas: 1</em></p>
+            </div>
+            <div class="status-text ditolak">
+                DITOLAK
+            </div>
+        </section>
+    </article>
+
+    <aside class="col-3">
+        <section class="styled time">
+            <p>
+                <b>Waktu Server</b>
+                <br>
+                <figure>
+                    <img src="images/clock.png" class="responsive-img" alt="Jam Server">
+                    <figcaption>
+                        <em>Sabtu, 28 Nov 2018</em>
+                    </figcaption>
+                </figure>
+            </p>
+        </section>
+
+        <section class="styled event">
+            <p>
+                <b>Acara Yang Akan Datang</b>
+            </p>
+            <figure>
+                <img src="images/holiday.jpg" class="responsive-img" alt="gambar">
+                <figcaption>
+                    <em>Libur Akhir Semester Gasal 2018 - 2019</em>
+                </figcaption>
+            </figure>
+
+            <p>20 Des 2018</p>
+
+            <button class="styled hoverable">Info</button>
+        </section>
+
+        <section class="styled calendar">
+            <p>
+                <b>Kalendar</b>
+                <br><br>
+                
+                <img src="images/calendar.png" id="calendar" class="responsive-img modal-img hoverable" alt="Kalendar Akademik">
+            </p>
+
+            <!-- Calendar Modal -->
+            <div id="calendar-modal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img-modal">
+                <div id="caption"></div>
+            </div>
+        </section>
+    </aside>
+
+    <footer class="footer-1">
+        <p>Pemilihan  Daftar  Mata  Kuliah  Bagi  Asisten  Mahasiswa</p>
+    </footer>
+    <footer class="footer-2">
+        <p>
+            <a href="https://www.ubaya.ac.id/" target="_blank">Universitas Surabaya</a>
+        </p>
+    </footer>
+    
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        function barClicked() {
+            $('nav#topnav').toggleClass('responsive');
+        }
+
+        var $modal = $('#calendar-modal'),
+            $imgModal = $('#img-modal'),
+            $caption = $('#caption');
+        
+        // When user click on calendar
+        $('#calendar').click(function() {
+            $modal.show();
+            $imgModal.attr('src', this.src);
+            $caption.text(this.alt);
+        });
+
+        // When user click on modal's close button
+        $('#calendar-modal .close').click(function() {
+            $modal.hide();
+        });
+    </script>
+</body>
+</html>

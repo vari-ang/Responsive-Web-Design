@@ -1,0 +1,860 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif, Arial;
+    background-color: #f4f4f4; /* White Smoke */
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a { /* Link */
+    text-decoration: none;
+    color: #D3D3D3; /* Light Grey */
+    font-weight: bold;
+}
+
+hr { /* Horizontal Rule */
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.home-logo {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.note {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.red-text {
+    color: red;
+    font-weight: bold;
+}
+
+#pin {
+    float: right;
+    font-size: 32px;
+    color: red;
+}
+
+#pin + h1 {
+    text-align: center; border-bottom: 4px solid red;
+}
+
+#informasi-text { text-align: center; color: #6B5B95; border: 2px solid #6B5B95; padding: 3px; }
+.informasi-link { color: #6B5B95; font-weight: bold; }
+#cara-mendaftar-text { text-align: center; color: #92B558; }
+#manfaat-title { text-align: center; border-bottom: 4px solid blue; }
+.pendapatan-title { text-align: center; color: #FFD662; background-color: grey; }
+.pendapatan-text { text-align: center; color: #FFD662; font-weight: bold; }
+#rekomendasi-text { text-align: center; border-bottom: 4px solid #91A8D0; }
+
+#cara-mendaftar-box { text-align: center; }
+#cara-mendaftar-box img.responsive-img {
+    max-width: 350px;
+    max-height: 550px;
+}
+#cara-mendaftar-box a { color: black; }
+
+#rekomendasi-box ul.styled li:hover {
+    cursor: default;
+    background-color: #7c94a4;
+    color: white;
+}
+
+
+span.red-bold-text { color: #BC243C; font-weight: bold; }
+span.brown-bold-text { color: #755139; font-weight: bold; }
+span.blue-bold-text { color: #00539C; font-weight: bold; }
+span.green-bold-text { color:#92B558; font-weight: bold; }
+
+/* Schedule Table */
+#schedule table, #schedule td, #schedule th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#schedule table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#schedule th, #schedule td {
+    padding: 15px;
+    text-align: center;
+}
+
+.clear { clear: both; }
+
+.hoverable:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.24), 0 12px 45px 0 rgba(0,0,0,0.19);
+}
+
+/* Checkbox */
+/* The container */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #4E6270;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+button.styled { /* Button */
+    background-color: #4E6270;
+    border: none;
+    color: white;
+    padding: 14px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button.styled:hover {
+    background-color: #D0D0D0;
+    color: black;
+}
+
+/* Select Box */
+select.styled {
+    border: none;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    height: 26px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Image */
+img.rounded-img { border-radius: 100%; }
+
+img.responsive-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+img.modal-img {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+/* Calendar Modal */
+.modal {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black with opacity */
+    width: 100%;
+    height: 100%;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* TOP NAVIGATION */
+.fa-home {
+    padding-right: 10px;
+}
+
+header#top-header { 
+    background-color: #4E6270;
+}
+
+nav.topnav {
+    overflow: hidden;
+}
+
+nav.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 16px 22px;
+    text-decoration: none;
+}
+
+nav.topnav a.login {
+    float: right;
+}
+
+nav.topnav a:hover {
+    background-color: #D3D3D3; /* Light Grey */
+    color: black;
+}
+
+.active {
+    background-color:#3A4B54;
+    color: white;
+}
+
+nav.topnav .bar {
+    display: none;
+}
+
+/* GRID */
+.col-1 {
+    width: 25%;
+    height: auto;
+    float: left;
+}
+
+.col-2 {
+    width: 50%;
+    min-height: 800px;
+    height: auto;
+    float: left;
+}
+
+.col-3 {
+    width: 25%;
+    height: auto;
+    float: left;
+}
+
+/* Pilih Kelas */
+.checkbox-container.kp {
+    top: -10px;
+    left: 7.5px;
+}
+
+.col-2-1 {
+    width: 70%;
+    float: left;
+}
+
+.col-2-1 #schedule { /* Table Container */
+    overflow: auto;
+    height: 500px;
+}
+
+.col-2-2 {
+    width: 28%;
+    float: left;
+}
+
+.red { background: #BC243C; }
+.blue {background: #00539C; }
+.yellow { background: #FFD662; }
+.green { background: #92B558; }
+.brown { background: #755139; }
+.pink { background: #F7CAC9; }
+.aqua { background: #91A8D0; }
+
+.daftar-kp-box {
+    display: inline-block;    
+    width: 35px; 
+    height: 35px; 
+    margin-bottom: 10px;
+}
+
+.daftar-kp-text {
+    display: inline-block; 
+    vertical-align: 25px;
+}
+
+#pilih-select { width: 20%; }
+
+.col-2 #info h2 { color: #4E6270; text-align: center; }
+
+#mk-title { float: left; }
+
+#sks { float: right; color: green; }
+
+#mk-info { text-align: center; }
+
+.daftar-btn {
+    width: 100%;
+}
+
+/* Daftar Kelas */
+#daftar-kelas h2 {
+    text-align: center;
+    color: #4E6270;
+}
+
+#cari-daftar-box {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#cari-daftar-box label {
+    float: left;
+    width: 40%;
+}
+
+#input-mk {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 85%;
+    background: #f4f4f4;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button.search {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    background: #4E6270;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+select.daftar-select { width: 60%; margin-bottom: 10px; }
+
+#filter-btn {
+    float: right;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#daftar-box { overflow-x: auto; }
+
+table#daftar-table {
+    margin: 0px auto 20px auto;
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+table#daftar-table tr {
+    width: 30%;
+    height: 240px;
+}
+
+table#daftar-table td {
+    width: 30%;
+    height: 240px;
+}
+
+span:hover{
+    cursor: pointer;
+}
+
+#daftar-table section.styled {
+    position: relative;
+    text-align: center;
+    height: 95%;
+    overflow: scroll;
+    cursor: pointer;
+}
+
+#daftar-table p {
+    background: rgba(255, 255, 255, 0.75);
+    font-weight: bold;
+    padding: 1.25px;
+    color: black;
+}
+
+#daftar-table a { font-weight: normal; }
+
+#daftar-table section.styled {
+    background-color: #f4f4f4;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#desweb-box { background-image: url('images/desweb.jpg'); }
+#desgraf-box { background-image: url('images/desgraf.png'); }
+#alpro-box { background-image: url('images/alpro.jpeg'); }
+#fotografi-box { background-image: url('images/fotografi.jpg'); }
+#kombis-box { background-image: url('images/kombis.jpg'); }
+#typography-box { background-image: url('images/typography.jpg'); }
+#peweb-box { background-image: url('images/peweb.jpg'); }
+#basdat-box { background-image: url('images/basdat.png'); }
+#pemodelan-box { background-image: url('images/pemodelan.jpg'); }
+
+.content-label {
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+
+.content-label-title {
+    margin: 0 auto 10px auto;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Pagination */
+.pag-center { text-align: center; margin-top: 20px; }
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #4E6270;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/* Section */
+section.styled {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 25px;
+    border-radius: 5px;
+    padding: 10px;
+    height: auto;
+    background: white;
+    text-align: justify;
+}
+
+section h2, section p {
+    margin-top: 0px;
+}
+
+section.profile, section.time, section.event, section.calendar {
+    text-align: center;
+    /* color: #4E6270; */
+}
+
+.profile-col-1, .profile-col-2 {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+section ul.styled {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    list-style-type: none;
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+section ul.styled li {
+    text-align: center;
+    color: white;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #7c94a4;
+    padding: 12px;
+}
+
+section ul.styled li:hover {
+    background-color: #D0D0D0;
+    color: black;
+}
+
+/* Footer */
+footer {
+    color: white;
+    text-align: center;
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+.footer-1 {
+    margin-top: 75px;
+    background-color: #4E6270;
+    min-height: 40px;
+    height: auto;
+    line-height: 40px;
+}
+
+.footer-2 {
+    background-color: #3A4B54;
+    min-height: 15px;
+    height: auto;
+    line-height: 15px;
+}
+
+/* Login */
+#login-header {
+    background-color: #4E6270;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 40px;
+    min-height: 75px;
+}
+
+#login-header h2 {
+    margin: 0;
+    line-height: 75px;
+}
+
+#logoubaya {
+    padding: 5px;
+    margin: auto;
+    width: 64px; 
+    float: left;
+}
+
+section.logins #left-panel {
+    background-color: #C0C0C0; /* Silver */
+    float: left;
+    width: 40%;
+    height: 410px;
+    margin-top: 10px
+}
+
+section.logins #left-panel img {
+    width: 100%; 
+    height: 100%;
+}
+
+section.logins #right-panel {
+    width: 57%; 
+    display: inline-block; 
+    margin-left: 3%;
+}
+
+small.logins {
+    color:grey;
+    font-size: 12pt;
+    text-align: left;
+}
+
+span.remember {
+    text-align: center;
+    color: grey;
+    font-size: 16px;
+}
+
+.logins {
+    font-size: 24px;
+}
+
+section.logins {
+    width: 75%;
+    height: 40%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 3px;    
+}
+
+section.logins h1 { text-align: center; }
+
+p.logins{
+    position: absolute;
+    float : left;
+    text-align: left;
+}
+input.logins{
+    position: relative;
+    float : left;
+    width : 100%;
+}
+
+#login-btn { 
+    margin-top: 35px;
+    padding: 15px 25px;
+    width: 100%;
+}
+
+.col-login {
+    width: 100%;
+    min-height: 350px;
+    height: auto;
+    float: left;
+}
+
+/* Small screen display */
+@media screen and (max-width: 600px) {
+    .col-1 { width: 100%; }
+    .col-2 { width: 100%; }
+    .col-3 { width: 100%; }
+
+    /* Topnav */
+    nav.topnav a:not(:first-child) {display: none;}
+    nav.topnav a.bar {
+        float: right;
+        display: block;
+    }
+    nav.topnav.responsive {position: relative;}
+    nav.topnav.responsive .bar {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    nav.topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .profile-col-1 {      
+        text-align: right;
+    }
+
+    .profile-col-2 {    
+        text-align: left;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    /* Login */
+    #login-header { margin-bottom: 10px; }
+    #login-header h2 { line-height: 40px; }
+
+    /* Hilangkan logo 50th Ubaya */
+    section.logins #left-panel {
+        display: none;
+    }
+
+    section.logins #right-panel {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    section.logins {
+        width: 100%;
+    }
+}
+
+/* Status MK */
+/* Section paling atas */
+#status-header { text-align: center; }
+
+#status-header h2 { color: #4E6270; }
+
+/* Status Box tiap MK */
+.status-box {
+    width: 70%;
+    position: relative;
+}
+
+.status-text {
+    overflow: auto;
+    width: 30%;
+    text-align: center;
+    position: relative;
+    float: right;
+    top: -90px;
+    right: 5px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.status-text.disetujui { border: 2px solid #27ae60; color: #27ae60; }
+.status-text.menunggu { border: 2px solid #E47A2E; color: #E47A2E; }
+.status-text.ditolak { border: 2px solid #BC243C; color: #BC243C; }
+
+/* Medium screen display */
+@media screen and (min-width: 600px) {
+    .col-1 { width: 30%; float: left; }
+    .col-2 { width: 70%; float: right; }
+    .col-3 { width: 30%; float: left; }
+
+    /* Login */
+    section.logins {
+        width: 75%;
+    }
+
+    /* Hilangkan logo 50th Ubaya */
+    section.logins #left-panel {
+        display: none;
+    }
+
+    section.logins #right-panel {
+        width: 100%;
+        margin-left: 0%;
+    }
+}   
+
+/* Large screen display */
+@media screen and (min-width: 868px) {
+    .col-1 { width: 20%; float: left; }
+    .col-2 { width: 60%; float: left; }
+    .col-3 { width: 20%; float: left; }
+
+    /* Login */
+    section.logins {
+        width: 75%;
+    }
+
+    section.logins #left-panel {
+        display: initial;
+        float: left;
+        width: 40%;
+        height: 410px;
+        margin-top: 10px;
+    }
+    section.logins #left-panel img {
+        width: 100%; 
+        height: 100%;
+    }
+
+    section.logins #right-panel {
+        width: 57%; 
+        margin-left: 3%;
+    }
+}
+
+/* Very Large screen display */
+@media screen and (min-width: 1068px) {
+    .profile-col-1 {      
+        text-align: right;
+    }
+
+    .profile-col-2 {    
+        text-align: left;
+    }
+}

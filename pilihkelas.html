@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Import Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- File eksternal CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Project Desweb</title>
+</head>
+<body>
+    <header id="top-header">
+        <nav class="topnav" id="topnav">     
+            <a href="index.html">
+                <img src="images/ubaya.png" alt="Logo" class="home-logo">
+                Home
+            </a>
+            <a href="daftarkelas.html">Daftar Kelas Matkul</a>
+            <a href="pilihkelas.html" class="active">Pilih Kelas</a>
+            <a href="statuskelas.html">Status Kelas</a>
+            <a class="login" href="login.html">
+                <i class="fa fa-sign-in"></i> Log In
+            </a>
+            <a href="#" class="bar" onclick="barClicked()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+      
+    <aside class="col-1">
+        <section class="styled profile">
+            <h2>Biodata Diri</h2>
+            <img src="images/user.jpg" class="rounded-img" width="125px" height="125px" alt="Profile Picture">
+            <hr>
+               
+            <div class="profile-col-1">Nama:</div>
+            <div class="profile-col-2">&nbsp;Otnil</div>
+            <br><br>
+            
+            <div class="profile-col-1">IPK:</div>
+            <div class="profile-col-2">&nbsp;3.87</div>
+            <br><br>
+
+            <div class="profile-col-1">Semester:</div>
+            <div class="profile-col-2">&nbsp;6</div>
+            <br><br>
+
+            <div class="profile-col-1">Total SKS:</div>
+            <div class="profile-col-2">&nbsp;109</div>
+
+            <div class="clear"></div>
+        </section>
+
+        <section>
+            <ul class="styled">
+                <li>Ubah Data Pribadi</li>
+                <li>Ganti Password</li>
+                <li>Log Out</li>
+            </ul>
+        </section>
+    </aside>
+
+    <article class="col-2">
+        <section class="styled" id="info">
+            <h2>Pemilihan Daftar Asistensi MK</h2>
+
+            <p id="mk-title">
+                <b>Desain Web (160AA04)</b>
+            </p>
+            <p id="sks">
+                <b>2 SKS</b>
+            </p>
+
+            <div class="clear"></div>
+            <br>
+
+            <div id="mk-info">
+                <p>Ruang Kelas: TC 4A</p>
+                <p>Dosen Pengajar: Adam Levine, S. Kom</p>
+                <p>Jumlah Asisten Yang Dibutuhkan: 10</p>
+                <p>Jumlah Asisten Saat Ini: 6</p>
+                <p>
+                    Skala Prioritas: 
+                    <select id="pilih-select" name="prioritas" class="styled">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </p>
+                <p class="red-text">Syarat Minimal: Semester 5 dan MK mendapat nilai >= AB</p>
+                <p class="note">
+                    *Pilih 1 atau lebih KP di bawah ini yang ingin diasisteni
+                </p>
+            </div>
+        </section>
+
+        <section class="col-2-1">
+
+            <div class="clear"></div>
+
+            <section id="schedule" class="styled">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>Senin</td>
+                        <td>Selasa</td>
+                        <td>Rabu</td>
+                        <td>Kamis</td>
+                        <td>Jumat</td>
+                        <td>Sabtu</td>
+                    </tr>
+                    <tr>
+                        <td>07:00 - 07:55</td>
+                        <td class="red">
+                            <label class="checkbox-container kp">
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td class="yellow">
+                            <label class="checkbox-container kp">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>07:55 - 08:50</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="pink">
+                            <label class="checkbox-container kp">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>08:50 - 09:45</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>09:45 - 10:40</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10:40 - 11:35</td>
+                        <td></td>
+                        <td></td>
+                        <td class="aqua">
+                            <label class="checkbox-container kp">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td class="blue">
+                            <label class="checkbox-container kp">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>11:35 - 12:25</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 13:55</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13:55 - 14:50</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>14:50 - 15:45</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>15:45 - 16:40</td>
+                        <td class="brown">
+                            <label class="checkbox-container kp">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="green">
+                            <label class="checkbox-container kp">
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>16:40 - 17:35</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>17:35 - 18:30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        <section class="col-2-2">
+            <section class="styled daftar-btn">
+                <h2>Daftar KP</h2>
+                <div class="daftar-kp-box red"></div>
+                <span class="daftar-kp-text">A</span>
+                <br>
+                <div class="daftar-kp-box blue"></div>
+                <span class="daftar-kp-text">B</span>
+                <br>
+                <div class="daftar-kp-box yellow"></div>
+                <span class="daftar-kp-text">C</span>
+                <br>
+                <div class="daftar-kp-box green"></div>
+                <span class="daftar-kp-text">D</span>
+                <br>
+                <div class="daftar-kp-box brown"></div>
+                <span class="daftar-kp-text">E</span>
+                <br>
+                <div class="daftar-kp-box pink"></div>
+                <span class="daftar-kp-text">F</span>
+                <br>
+                <div class="daftar-kp-box aqua"></div>
+                <span class="daftar-kp-text">G</span>
+            </section>
+        </section>
+        
+        <div class="clear"></div>
+
+        <section class="styled">
+            <a href="statuskelas.html">
+                <button class="styled daftar-btn">Daftar</button>
+            </a>
+        </section>
+    </article>
+
+    <aside class="col-3">
+        <section class="styled time">
+            <p>
+                <b>Waktu Server</b>
+                <br>
+                <figure>
+                    <img src="images/clock.png" class="responsive-img" alt="Jam Server">
+                    <figcaption>
+                        <em>Sabtu, 28 Nov 2018</em>
+                    </figcaption>
+                </figure>
+            </p>
+        </section>
+
+        <section class="styled event">
+            <p>
+                <b>Acara Yang Akan Datang</b>
+            </p>
+            <figure>
+                <img src="images/holiday.jpg" class="responsive-img" alt="gambar">
+                <figcaption>
+                    <em>Libur Akhir Semester Gasal 2018 - 2019</em>
+                </figcaption>
+            </figure>
+
+            <p>20 Des 2018</p>
+
+            <button class="styled hoverable">Info</button>
+        </section>
+
+        <section class="styled calendar">
+            <p>
+                <b>Kalendar</b>
+                <br><br>
+                
+                <img src="images/calendar.png" id="calendar" class="responsive-img modal-img hoverable" alt="Kalendar Akademik">
+            </p>
+
+            <!-- Calendar Modal -->
+            <div id="calendar-modal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img-modal">
+                <div id="caption"></div>
+            </div>
+        </section>
+    </aside>
+
+    <footer class="footer-1">
+        <p>Pemilihan  Daftar  Mata  Kuliah  Bagi  Asisten  Mahasiswa</p>
+    </footer>
+    <footer class="footer-2">
+        <p>
+            <a href="https://www.ubaya.ac.id/" target="_blank">Universitas Surabaya</a>
+        </p>
+    </footer>
+    
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        function barClicked() {
+            $('nav#topnav').toggleClass('responsive');
+        }
+
+        var $modal = $('#calendar-modal'),
+            $imgModal = $('#img-modal'),
+            $caption = $('#caption');
+        
+        // When user click on calendar
+        $('#calendar').click(function() {
+            $modal.show();
+            $imgModal.attr('src', this.src);
+            $caption.text(this.alt);
+        });
+
+        // When user click on modal's close button
+        $('#calendar-modal .close').click(function() {
+            $modal.hide();
+        });
+    </script>
+</body>
+</html>

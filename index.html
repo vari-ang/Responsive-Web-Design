@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Import Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- File eksternal CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Project Desweb</title>
+</head>
+<body>
+    <header id="top-header">
+        <nav class="topnav" id="topnav">     
+            <a href="index.html" class="active">
+                <img src="images/ubaya.png" alt="Logo" class="home-logo">
+                Home
+            </a>
+            <a href="daftarkelas.html">Daftar Kelas Matkul</a>
+            <a href="pilihkelas.html">Pilih Kelas</a>
+            <a href="statuskelas.html">Status Kelas</a>
+            <a class="login" href="login.html">
+                <i class="fa fa-sign-in"></i> Log In
+            </a>
+            <a href="#" class="bar" onclick="barClicked()">
+                <i class="fa fa-bars pin"></i>
+            </a>
+        </nav>
+    </header>
+      
+    <aside class="col-1">
+        <section class="styled profile">
+            <h2>Biodata Diri</h2>
+            <img src="images/user.jpg" class="rounded-img" width="125px" height="125px" alt="Profile Picture">
+            <hr>
+               
+            <div class="profile-col-1">Nama:</div>
+            <div class="profile-col-2">&nbsp;Otnil</div>
+            <br><br>
+            
+            <div class="profile-col-1">IPK:</div>
+            <div class="profile-col-2">&nbsp;3.87</div>
+            <br><br>
+
+            <div class="profile-col-1">Semester:</div>
+            <div class="profile-col-2">&nbsp;6</div>
+            <br><br>
+
+            <div class="profile-col-1">Total SKS:</div>
+            <div class="profile-col-2">&nbsp;109</div>
+
+            <div class="clear"></div>
+        </section>
+
+        <section>
+            <ul class="styled">
+                <li>Ubah Data Pribadi</li>
+                <li>Ganti Password</li>
+                <li>Log Out</li>
+            </ul>
+        </section>
+    </aside>
+
+    <article class="col-2">
+        <section class="styled">
+            <i id="pin" class="fa fa-thumb-tack"></i>
+            <h1>Batas Waktu Pendaftaran Asisten Mahasiswa</h1>
+            <p>Pendaftaran Asisten Teknik Informatika (IF, SI, MM) periode 2018 - 2019 di buka pada 1 Oktober 2018 08:00 dan akan ditutup pada tanggal 
+                <span class="red-text">30 November 2018 23:59.</span>
+            </p> 
+        </section>
+
+        <section class="styled">
+            <h1 id="informasi-text">Informasi</h1>
+            <p>Anda sudah mendaftarkan 4 MK, dengan status:</p>
+            <ul style="list-style-type: circle;">
+                <li>1 MK Disetujui</li>
+                <li>2 MK Menunggu</li>
+                <li>1 MK Ditolak</li>
+            </ul>
+            <p>
+                Periksa status kelas lebih lengkap <a class="informasi-link" href="statuskelas.html">di sini.</a> 
+            </p>
+            <p>
+                Saat ini, masih ada 16 mata kuliah yang membutuhkan asisten. <a class="informasi-link" href="daftarkelas.html">Lihat sekarang</a> MK - MK tersebut dan daftarkan diri Anda untuk mendapatkan keuntungan - keuntungan menarik.
+            </p>
+        </section>
+
+        <section id="cara-mendaftar-box" class="styled">
+            <h1 id="cara-mendaftar-text">Cara Menjadi Asisten Mahasiswa</h1>
+            <br>
+            <p>
+                <a href="login.html">1. <span class="green-bold-text">Login</span> terlebih dahulu ke sistem.</a>
+                <figure>
+                    <a href="login.html">
+                        <img class="responsive-img hoverable modal-img" src="images/login.png" alt="Login">
+                    </a>
+                </figure>
+            </p>
+            <br>
+            <p>
+                <a href="daftarkelas.html">2. <span class="green-bold-text">Lihat daftar kelas</span> matakuliah.</a>
+                <figure>
+                    <a href="daftarkelas.html">
+                        <img class="responsive-img hoverable modal-img" src="images/daftar-kelas.png" alt="Daftar Kelas">
+                    </a>
+                </figure>
+            </p>
+            <br>
+            <p>
+                <a href="pilihkelas.html">3. <span class="green-bold-text">Pilih dan daftarkan</span> matakuliah yang diminati untuk diasisteni.</a>
+                <figure>
+                    <a href="pilihkelas.html">
+                        <img class="responsive-img hoverable modal-img" src="images/pilih-kelas.png" alt="Pilih Kelas">
+                    </a>
+                </figure>
+            </p>
+            <br>
+            <p>
+                <a href="statuskelas.html"></a>4. <span class="green-bold-text">Tunggu dan cek status</span> matakuliah.
+                <figure>
+                    <a href="statuskelas.html">
+                        <img class="responsive-img hoverable modal-img" src="images/status-kelas.png" alt="Status Kelas">
+                    </a>
+                </figure>
+            </p>
+        </section>
+
+        <section class="styled">
+            <h1 id="manfaat-title">Manfaat Menjadi Asisten Mahasiswa </h1>
+            <p>
+                <span class="blue-bold-text">1. Bisa menggali ilmu perkuliahan lebih dalam.</span> Kamu dapat menggali ilmu lebih dalam 
+                dari mahasiswa yang kamu asisteni dengan mengulang kembali pelajaran dan belajar bersama.
+            </p>
+            <p>
+                <span class="blue-bold-text">2. Bisa mendapatkan jaringan lebih luas.</span> Dengan menjadi asisten mahasiswa, otomatis
+                kamu akan sering ikut dalam kegiatan dari dosen tersebut sehingga kamu bisa mendapat 
+                koneksi akademis ke dosen tersebut atau dosen lainnya dan tentunya koneksi dari mahasiswa - mahasiswa yang kamu assiteni.
+            </p>
+            <p>
+                <span class="blue-bold-text">3. Mendapatkan pengalaman mengajar.</span> Pengalaman mengajar mahasiswa lain dapat membantu kamu mendapat pekerjaan impianmu loh! 
+            </p>
+            <p>
+                <span class="blue-bold-text">4. Mendapatkan gaji.</span> Kapan lagi belajar lebih, digaji lagi! Lumayan untuk 
+                tambahan uang saku.
+            </p>
+            <p>
+                <span class="blue-bold-text">5. Prioritas Input Mata Kuliah.</span> Kamu tidak perlu lagi khawatir tentang kasus khusus karena otomatis asisten akan mendapatkan prioritas input MK pada saat perwalian.
+            </p>
+        </section>
+       
+        <section class="styled">
+            <h1 class="pendapatan-title">Pendapatan Menjadi Asisten Mahasiswa</h1>
+            <p>Pendapatan menjadi asisten mahasiswa ini cukup banyak loh. Sebelum menjadi asisten mahasiswa
+                kamu harus magang selama 1 semester tanpa digaji. Untuk semester berikutnya jika melanjutkan
+                menjadi asisten mahasiswa, baru kamu digaji. 
+                <span class="pendapatan-text">Per 1 SKS</span> tiap minggu kamu akan mendapat <span class="pendapatan-text">Rp. 70.000</span>, lumayan kan buat nambah pemasukan.  
+                <br>
+                <br>
+                Namun, jangan terlalu terpaku dengan gaji yang akan didapat. Menjadi asisten mahasiswa 
+                tidak terlalu menghasilkan banyak uang namun pengalaman yang didapat sangat berharga. 
+                Selain itu kamu juga mendapatkan koneksi dengan dosen dan mahasiswa baru.
+            </p>
+        </section>
+
+        <section id="rekomendasi-box" class="styled"> 
+            <h1 id="rekomendasi-text">Rekomendasi Mata Kuliah Asisten</h1> 
+            <p>Asisten mahasiswa merupakan mahasiswa yang membantu dosen dalam melakukan tugasnya.
+                Selain harus memperhatikan jadwal, calon asisten mahasiswa harus memperhatikan mata
+                 kuliah yang ingin didaftarkan. Pilih mata kuliah yang sesuai dengan jurusan atau mata kuliah 
+                 yang lebih unggul dari mata kuliah lain. Beberapa rekomendasi mata kuliah yang dapat diambil :
+            </p>
+            <p>
+                <ul class="styled">
+                    <li><span class="red-bold-text">Mahasiswa Informatika</span></li>
+                </ul>
+            </p>
+            <p>
+                <span class="red-bold-text">1. Algoritma dan Pemrograman</span>
+                <br>
+                Sebagai mahasiswa informatika tentu saja 
+                anda sudah mendalami mata kuliah yang berhubungan dengan koding sehingga cocok untuk Menjadi
+                asisten dari mata kuliah ini
+                <br><br>
+                <span class="red-bold-text">2. Pemrograman Berorientasi Objek</span>
+                <br>
+                Mata kuliah ini merupakann lanjutan dari Algoritma dan 
+                pemrograman. Mata kuliah ini mempelajari lebih dalam tentang koding yang sudah dikuasai oleh 
+                mahasiswa informatika.
+            </p>
+            
+            <p>
+                <ul class="styled">
+                    <li><span class="brown-bold-text">Mahasiswa Sistem Informasi</span></li>
+                </ul>
+            </p>
+            <p>
+                <span class="brown-bold-text">1. Basis Data</span>
+                <br>
+                Basis data merupakan mata kuliah yang wajib dikuasai oleh mahasiswa sistem 
+                informasi, karena berhubungan dengan dasar pembangunan sebuah sistem berbasis informasi. Mata kuliah ini cocok untuk mahasiswa SI karena 
+                anda dapat belajar lebih dalam sambil mengajari mahasiswa lain.
+                <br><br>
+                <span class="brown-bold-text">2. Pemrograman Basis Data</span>
+                <br>
+                Mata kuliah ini merupakan lanjutan dari mata kuliah Basis Data. 
+                Bagi mahasiswa SI tentu saja mata kuliah ini harus dikuasai supaya dapat membuat sistem yang dapat menyediakan informasi yang bermanfaat.
+            </p>
+
+            <p>
+                <ul class="styled rekomendasi">
+                    <li><span class="blue-bold-text">Mahasiswa Multimedia</span></li>
+                </ul>
+            </p>
+            <p>
+                <span class="blue-bold-text">1. Desain Grafis</span>
+                <br>
+                Desain grafis merupakan mata kuliah wajib di prodi Multimedia. Lulusan 
+                multimedia harus menguasai desain grafis karena di masa depan akan diperlukan. Dengan menjadi
+                asisten mahasiswa, mahasiswa dapat belajar lebih dari dosen.
+                <br><br>
+                <span class="blue-bold-text">2. Game Development</span>
+                <br> 
+                Menjadi game developer adalah cita-cita mayoritas mahasiswa Multimedia.
+                Dengan menjadi asisten mahasiswa mata kuliah Game development, kamu sudah memiliki tahap awal mencari pengalaman 
+                sebelum terjun di dunia kerja.
+            </p>
+
+        </section>
+    </article>
+
+    <aside class="col-3">
+        <section class="styled time">
+            <p>
+                <b>Waktu Server</b>
+                <br>
+                <figure>
+                    <img src="images/clock.png" class="responsive-img" alt="Jam Server">
+                    <figcaption>
+                        <em>Sabtu, 28 Nov 2018</em>
+                    </figcaption>
+                </figure>
+            </p>
+        </section>
+
+        <section class="styled event">
+            <p>
+                <b>Acara Yang Akan Datang</b>
+            </p>
+            <figure>
+                <img src="images/holiday.jpg" class="responsive-img" alt="gambar">
+                <figcaption>
+                    <em>Libur Akhir Semester Gasal 2018 - 2019</em>
+                </figcaption>
+            </figure>
+
+            <p>20 Des 2018</p>
+
+            <button class="styled hoverable">Info</button>
+        </section>
+
+        <section class="styled calendar">
+            <p>
+                <b>Kalendar</b>
+                <br><br>
+                
+                <img src="images/calendar.png" id="calendar" class="responsive-img modal-img hoverable" alt="Kalendar Akademik">
+            </p>
+
+            <!-- Calendar Modal -->
+            <div id="calendar-modal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img-modal">
+                <div id="caption"></div>
+            </div>
+        </section>
+    </aside>
+
+    <footer class="footer-1">
+        <p>Pemilihan  Daftar  Mata  Kuliah  Bagi  Asisten  Mahasiswa</p>
+    </footer>
+    <footer class="footer-2">
+        <p>
+            <a href="https://www.ubaya.ac.id/" target="_blank">Universitas Surabaya</a>
+        </p>
+    </footer>
+    
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        function barClicked() {
+            $('nav#topnav').toggleClass('responsive');
+        }
+
+        var $modal = $('#calendar-modal'),
+            $imgModal = $('#img-modal'),
+            $caption = $('#caption');
+        
+        // When user click on calendar
+        $('#calendar').click(function() {
+            $modal.show();
+            $imgModal.attr('src', this.src);
+            $caption.text(this.alt);
+        });
+
+        // When user click on modal's close button
+        $('#calendar-modal .close').click(function() {
+            $modal.hide();
+        });
+    </script>
+</body>
+</html>

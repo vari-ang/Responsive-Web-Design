@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Import Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- File eksternal CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Project Desweb</title>
+</head>
+<body>
+    <header id="top-header">
+        <nav class="topnav" id="topnav">     
+            <a href="index.html">
+                <img src="images/ubaya.png" alt="Logo" class="home-logo">
+                Home
+            </a>
+            <a href="#" class="active">Daftar Kelas Matkul</a>
+            <a href="pilihkelas.html">Pilih Kelas</a>
+            <a href="statuskelas.html">Status Kelas</a>
+            <a class="login" href="login.html">
+                <i class="fa fa-sign-in"></i> Log In
+            </a>
+            <a href="#" class="bar" onclick="barClicked()">
+                <i class="fa fa-bars pin"></i>
+            </a>
+        </nav>
+    </header>
+      
+    <aside class="col-1">
+        <section class="styled profile">
+            <h2>Biodata Diri</h2>
+            <img src="images/user.jpg" class="rounded-img" width="125px" height="125px" alt="Profile Picture">
+            <hr>
+               
+            <div class="profile-col-1">Nama:</div>
+            <div class="profile-col-2">&nbsp;Otnil</div>
+            <br><br>
+            
+            <div class="profile-col-1">IPK:</div>
+            <div class="profile-col-2">&nbsp;3.87</div>
+            <br><br>
+
+            <div class="profile-col-1">Semester:</div>
+            <div class="profile-col-2">&nbsp;6</div>
+            <br><br>
+
+            <div class="profile-col-1">Total SKS:</div>
+            <div class="profile-col-2">&nbsp;109</div>
+
+            <div class="clear"></div>
+        </section>
+
+        <section>
+            <ul class="styled">
+                <li>Ubah Data Pribadi</li>
+                <li>Ganti Password</li>
+                <li>Log Out</li>
+            </ul>
+        </section>
+    </aside>
+
+    <article class="col-2">
+        <section class="styled" id="daftar-kelas">
+            <h2>Daftar Mata Kuliah</h2>
+            <div id="cari-daftar-box">
+                <input id="input-mk" type="text" placeholder="Cari Daftar Mata Kuliah...">
+                <button class="search">
+                    <i class="fa fa-search"></i>
+                </button>
+                <div class="clear"></div>
+                
+                <label for="dosen">Dosen Pengajar:</label>
+                <select class="styled daftar-select" name="dosen">
+                    <option selected="selected">Semua</option>
+                    <option>Adam Purnama, S.Kom</option>
+                    <option>Budi Setia, S.Kom</option>
+                    <option>Mone, S.T</option>
+                    <option>Bambang Prawira, B.Sc</option>
+                    <option>Vari, B.Sc</option>
+                    <option>Angga Begawan</option>
+                    <option>Levin Setiadi, S.Kom</option>
+                </select>
+
+                <label for="nama-mk">Jurusan:</label>
+                <select class="styled daftar-select" name="nama-mk">
+                    <option selected="selected">Semua</option>
+                    <option>Informatika (IF)</option>
+                    <option>Sistem Informasi</option>
+                    <option>Multimedia</option>
+                </select>
+
+                <label for="sks">Jumlah SKS:</label>
+                <select class="styled daftar-select" name="sks">
+                        <option selected="selected">Semua</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>6</option>
+                    <option>9</option>
+                </select>
+
+                <label for="semester">Semester:</label>
+                <select class="styled daftar-select" name="semester">
+                    <option selected="selected">Semua</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+
+                <button id="filter-btn" class="styled">Filter</button>
+
+                <h3>Menampilkan 39 dari 39 Mata Kuliah</h3>
+            </div>
+
+            <div id="daftar-box">
+                <table id="daftar-table">
+                    <tr>
+                        <td>    
+                            <section id="desweb-box" class="styled hoverable">
+                                <a href="pilihkelas.html">
+                                    <div class="content-label">
+                                        <div class="content-label-title">
+                                            <p>
+                                                <span class="red-bold-text">Desain Web</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>
+                                        <span>Pengajar: Mone, S.T</span> 
+                                    </p>
+                                    <p>
+                                        <span>3 SKS</span> 
+                                    </p>
+                                    <p>
+                                        <span>Semester 3</span>   
+                                    </p>
+                                </a>
+                            </section>
+                        </td>
+                        <td>
+                            <section id="desgraf-box" class="styled hoverable">
+                                <a href="pilihkelas.html">
+                                    <div class="content-label">
+                                        <div class="content-label-title">
+                                            <p>
+                                                <span class="red-bold-text">Desain Grafis</span>
+                                            </p>           
+                                        </div>
+                                    </div>
+                                    
+                                    <p>
+                                        <span>Pengajar: Budi Setia, S.Kom</span>
+                                    </p>
+                                    <p>
+                                        <span>3 SKS</span> 
+                                    </p>
+                                    <p>
+                                        <span>Semester 6</span> 
+                                    </p>
+                                </a>
+                            </section>
+                        </td>
+                        <td>
+                            <section id="alpro-box" class="styled hoverable">
+                                <a href="pilihkelas.html">
+                                    <div class="content-label">
+                                        <div class="content-label-title">
+                                            <p>
+                                                <span class="red-bold-text">Algoritma dan Pemrograman</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>
+                                        <span>Pengajar: Vari, B.Sc</span>
+                                    </p>
+                                    <p>
+                                        <span>3 SKS</span> 
+                                    </p>
+                                    <p>
+                                        <span>Semester 1</span> 
+                                    </p>
+                                </a>
+                            </section>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section id="fotografi-box" class="styled hoverable">
+                                <a href="pilihkelas.html">
+                                    <div class="content-label">
+                                        <div class="content-label-title">
+                                            <p>
+                                                <span class="red-bold-text">Fotografi</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>
+                                        <span>Pengajar: Adam Levine, S.Kom</span>
+                                    </p>
+                                    <p>
+                                        <span>3 SKS</span> 
+                                    </p>
+                                    <p>
+                                        <span>Semester 6</span> 
+                                    </p>
+                                </a>
+                            </section>
+                        </td>
+                        <td>
+                            <section id="kombis-box" class="styled hoverable">
+                                <a href="pilihkelas.html">
+                                    <div class="content-label">
+                                        <div class="content-label-title">
+                                            <p>
+                                                <span class="red-bold-text">Komunikasi Bisnis</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>
+                                        <span>Pengajar: Bambang Prawira, B.Sc</span>
+                                    </p>
+                                    <p>
+                                        <span>3 SKS</span> 
+                                    </p>
+                                    <p>
+                                        <span>Semester 3</span> 
+                                    </p>
+                                </a>
+                            </section>
+                        </td>
+                        <td>
+                            <section id="typography-box" class="styled hoverable">
+                                <a href="pilihkelas.html">
+                                    <div class="content-label">
+                                        <div class="content-label-title">
+                                            <p>
+                                                <span class="red-bold-text">Typography</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>
+                                        <span>Pengajar: Bambang Prawira, B.Sc</span>
+                                    </p>
+                                    <p>
+                                        <span>3 SKS</span> 
+                                    </p>
+                                    <p>
+                                        <span>Semester 5</span> 
+                                    </p>
+                                </a>
+                            </section>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <section id="peweb-box" class="styled hoverable">
+                                <a href="pilihkelas.html">
+                                    <div class="content-label">
+                                        <div class="content-label-title">
+                                            <p>
+                                                <span class="red-bold-text">Pemrograman Web</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>
+                                        <span>Pengajar: Budi Setia, S.Kom</span>
+                                    </p>
+                                    <p>
+                                        <span>3 SKS</span> 
+                                    </p>
+                                    <p>
+                                        <span>Semester 4</span> 
+                                    </p>
+                                </a>
+                            </section>
+                        </td>
+                        <td>
+                            <section id="basdat-box" class="styled hoverable">
+                                <a href="pilihkelas.html">
+                                    <div class="content-label">
+                                        <div class="content-label-title">
+                                            <p>
+                                                <span class="red-bold-text">Basis Data</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>
+                                        <span>Pengajar: Adam Levine, S.Kom</span>
+                                    </p>
+                                    <p>
+                                        <span>3 SKS</span> 
+                                    </p>
+                                    <p>
+                                        <span>Semester 2</span> 
+                                    </p>
+                                </a>
+                            </section>
+                        </td>
+                        <td>
+                            <section id="pemodelan-box" class="styled hoverable">
+                                <a href="pilihkelas.html">
+                                    <div class="content-label">
+                                        <div class="content-label-title">
+                                            <p>
+                                                <span class="red-bold-text">Pemodelan 3D</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p>
+                                        <span>Pengajar: Levin Setiadi, S.Kom</span>
+                                    </p>
+                                    <p>
+                                        <span>3 SKS</span> 
+                                    </p>
+                                    <p>
+                                        <span>Semester 6</span> 
+                                    </p>
+                                </a>
+                            </section>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="pag-center">
+                <div class="pagination">
+                    <a href="#" disabled>&laquo;</a>
+                    <a href="#" class="active" disabled>1</a>
+                    <a href="daftarkelas.html">2</a>
+                    <a href="daftarkelas.html">3</a>
+                    <a href="daftarkelas.html">4</a>
+                    <a href="daftarkelas.html">5</a>
+                    <a href="#">&raquo;</a>
+                </div>        
+            </div>
+            
+        </section>
+    </article>
+
+    <aside class="col-3">
+        <section class="styled time">
+            <p>
+                <b>Waktu Server</b>
+                <br>
+                <figure>
+                    <img src="images/clock.png" class="responsive-img" alt="Jam Server">
+                    <figcaption>
+                        <em>Sabtu, 28 Nov 2018</em>
+                    </figcaption>
+                </figure>
+            </p>
+        </section>
+
+        <section class="styled event">
+            <p>
+                <b>Acara Yang Akan Datang</b>
+            </p>
+            <figure>
+                <img src="images/holiday.jpg" class="responsive-img" alt="gambar">
+                <figcaption>
+                    <em>Libur Akhir Semester Gasal 2018 - 2019</em>
+                </figcaption>
+            </figure>
+
+            <p>20 Des 2018</p>
+
+            <button class="styled hoverable">Info</button>
+        </section>
+
+        <section class="styled calendar">
+            <p>
+                <b>Kalendar</b>
+                <br><br>
+                
+                <img src="images/calendar.png" id="calendar" class="responsive-img modal-img hoverable" alt="Kalendar Akademik">
+            </p>
+
+            <!-- Calendar Modal -->
+            <div id="calendar-modal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img-modal">
+                <div id="caption"></div>
+            </div>
+        </section>
+    </aside>
+
+    <footer class="footer-1">
+        <p>Pemilihan  Daftar  Mata  Kuliah  Bagi  Asisten  Mahasiswa</p>
+    </footer>
+    <footer class="footer-2">
+        <p>
+            <a href="https://www.ubaya.ac.id/" target="_blank">Universitas Surabaya</a>
+        </p>
+    </footer>
+    
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        function barClicked() {
+            $('nav#topnav').toggleClass('responsive');
+        }
+
+        var $modal = $('#calendar-modal'),
+            $imgModal = $('#img-modal'),
+            $caption = $('#caption');
+        
+        // When user click on calendar
+        $('#calendar').click(function() {
+            $modal.show();
+            $imgModal.attr('src', this.src);
+            $caption.text(this.alt);
+        });
+
+        // When user click on modal's close button
+        $('#calendar-modal .close').click(function() {
+            $modal.hide();
+        });
+    </script>
+</body>
+</html>
